@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh Aravind - Data Analyst & Software Developer</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- SIDEBAR / LEFT COLUMN -->
+        <aside class="sidebar">
+            <!-- Profile Section -->
+            <div class="profile-card">
+                <div class="profile-image-wrapper">
+                    <img src="{% static 'core/files/profile.jpeg' %}" alt="Ganesh Aravind" class="profile-image">
+                </div>
+                <h1 class="name">Ganesh Aravind</h1>
+                <p class="title">Data Analyst & Software Developer</p>
+                
+                <div class="contact-info">
+                    <a href="mailto:ganesharavind18@gmail.com" class="contact-link">
+                        <span class="icon">📧</span> ganesharavind18@gmail.com
+                    </a>
+                    <a href="tel:+447776095480" class="contact-link">
+                        <span class="icon">📱</span> +44 777 609 5480
+                    </a>
+                    <a href="https://www.linkedin.com/in/ga418/" target="_blank" class="contact-link">
+                        <span class="icon">💼</span> LinkedIn Profile
+                    </a>
+                    <p class="contact-link">
+                        <span class="icon">📍</span> Nottingham, UK
+                    </p>
+                </div>
+            </div>
+
+            <!-- Resume Download -->
+            <div class="download-section">
+                <a href="/path/to/Resume_PDF.pdf" download class="btn btn-primary">
+                    <span>📄</span> Download PDF
+                </a>
+                <a href="/path/to/Resume_DOC.docx" download class="btn btn-secondary">
+                    <span>📋</span> Download DOCX
+                </a>
+            </div>
+
+            <!-- Skills -->
+            <div class="glass-card">
+                <h3 class="section-title">Skills</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">Tableau</span>
+                    <span class="skill-tag">Excel</span>
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="glass-card">
+                <h3 class="section-title">Certifications</h3>
+                <ul class="cert-list">
+                    <li>Atlassian Agile Project Management</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT / RIGHT COLUMN -->
+        <main class="content">
+
+        <!-- About Me -->
+        <section class="section">
+            <!--<h2 class="section-heading">About Me</h2> -->
+            
+            <div class="glass-card project-card">
+                <h3 class="project-title">Who I Am</h3>
+                <p class="date-range">A bit about me</p>
+
+                <p class="achievements">
+                    I’m someone who genuinely enjoys working with data and understanding how it shapes real decisions. 
+                    What motivates me most is taking something messy or unclear and transforming it into something 
+                    that actually helps people — whether that's a dashboard, a report, or a well-designed process. 
+                    I come from a mix of technical and analytical roles, which means I’m as comfortable writing code 
+                    as I am interpreting insights or collaborating with stakeholders. I like solving problems, learning 
+                    new tools, and building things that feel intuitive and meaningful. Outside of the technical side, 
+                    I’m driven by curiosity, clarity, and the satisfaction of creating work that genuinely makes a 
+                    difference.
+                </p>
+            </div>
+        </section>
+
+            <!-- Experience -->
+            <section class="section">
+                <h2 class="section-heading">Professional Experience</h2>
+                
+                <div class="glass-card experience-card">
+                    <div class="card-header">
+                        <h3 class="job-title">Data Analyst</h3>
+                        <span class="company">Nottingham Trent University</span>
+                    </div>
+                    <p class="date-range">May 2024 – Present</p>
+                    <ul class="achievements">
+                        <li>Co-leading funded research initiative for organisational insights dashboard in voluntary sector</li>
+                        <li>Designed full data pipeline using Python, Excel, and Django with multi-source dataset automation</li>
+                        <li>Created interactive dashboards in Power BI and Plotly for stakeholder exploration</li>
+                        <li>Oversaw team workflows via Git and Notion, coordinated development sprints</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card experience-card">
+                    <div class="card-header">
+                        <h3 class="job-title">Technical Analyst</h3>
+                        <span class="company">Zoho Corp</span>
+                    </div>
+                    <p class="date-range">July 2022 – June 2023</p>
+                    <ul class="achievements">
+                        <li>Elevated Zoho adoption rates by 40% through demonstrations; 20% increase in satisfaction</li>
+                        <li>Achieved 95% customer retention rate through optimal solution optimization</li>
+                        <li>Directed clients through technical challenges, achieving 40% efficiency surge</li>
+                        <li>Collaborated with sales team, contributing to 20% revenue increase</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card experience-card">
+                    <div class="card-header">
+                        <h3 class="job-title">Software Developer</h3>
+                        <span class="company">TCS Tata Innovation Labs</span>
+                    </div>
+                    <p class="date-range">Sep 2018 – July 2019</p>
+                    <ul class="achievements">
+                        <li>Automated database upgrade pre-checks using Python, reducing testing time by 50%</li>
+                        <li>Achieved 60% accuracy in flight delay prediction on aviation datasets</li>
+                        <li>Developed Django web app with Spark-Kafka streaming for real-time railway data analysis</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="section">
+                <h2 class="section-heading">Education</h2>
+                
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3 class="degree">M.Sc. Management and Business Analytics</h3>
+                        <span class="institution">Nottingham Trent University</span>
+                    </div>
+                    <p class="date-range">Sep 2023 – Oct 2024</p>
+                </div>
+
+                <div class="glass-card">
+                    <div class="card-header">
+                        <h3 class="degree">B.Tech. Information Technology</h3>
+                        <span class="institution">Sastra University</span>
+                    </div>
+                    <p class="date-range">Jun 2014 – Jun 2018</p>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section class="section">
+                <h2 class="section-heading">Projects</h2>
+                
+                <div class="glass-card project-card">
+                    <h3 class="project-title">Legal Database Optimization - Freeths LLP</h3>
+                    <p class="date-range">May 2024 – Jul 2024</p>
+                    <ul class="achievements">
+                        <li>Improved legal database efficiency by 25% through structured data organisation</li>
+                        <li>Enhanced data accessibility, reducing retrieval time by 30%</li>
+                        <li>Streamlined data integration, minimising redundancy by 40%</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Achievements -->
+            <section class="section">
+                <h2 class="section-heading">Achievements</h2>
+                
+                <div class="glass-card achievement-item">
+                    <h3>University Business Challenge</h3>
+                    <p class="date-range">2024</p>
+                    <p>Ranked among top 8 finalists nationwide out of 80 UK colleges, demonstrating analytical, leadership, and entrepreneurial excellence.</p>
+                </div>
+
+                <div class="glass-card achievement-item">
+                    <h3>Advanced Coursework</h3>
+                    <p>Design and Analysis of Algorithms, Machine Learning Algorithms (University of Central Florida - 2022)</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{% static 'core/script.js' %}"></script>
+</body>
+</html>
