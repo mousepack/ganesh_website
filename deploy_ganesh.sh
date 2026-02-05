@@ -26,6 +26,6 @@ echo "--- Reloading Nginx ---"
 systemctl reload nginx
 
 echo "--- Gunicorn Status ---"
-systemctl status gunorn_ganesh --no-pager
+systemctl status gunicorn_ganesh --no-pager
 
 echo "=== DEPLOYMENT COMPLETE: GANESH WEBSITE ==="
