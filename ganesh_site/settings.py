@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "ganesharavind.online",
     "www.ganesharavind.online",
+    "152.71.80.174",
 ]
 
 

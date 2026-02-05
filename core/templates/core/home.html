@@ -6,192 +6,449 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganesh Aravind - Data Analyst & Software Developer</title>
     <link rel="stylesheet" href="{% static 'core/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- SIDEBAR / LEFT COLUMN -->
-        <aside class="sidebar">
-            <!-- Profile Section -->
-            <div class="profile-card">
-                <div class="profile-image-wrapper">
-                    <img src="{% static 'core/files/profile.jpeg' %}" alt="Ganesh Aravind" class="profile-image">
+    <!-- Cursor follower -->
+    <div class="cursor-glow" aria-hidden="true"></div>
+    
+    <!-- Noise texture overlay -->
+    <div class="noise" aria-hidden="true"></div>
+
+    <!-- Hero Section - Full viewport intro -->
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <!--
+                <div class="hero-tag" data-reveal>
+                    <span class="tag-dot"></span>
+                    <span>Available for opportunities</span>
                 </div>
-                <h1 class="name">Ganesh Aravind</h1>
-                <p class="title">Data Analyst & Software Developer</p>
+                -->
+                <h1 class="hero-name" data-reveal data-delay="1">
+                    <span class="name-line">Ganesh</span>
+                    <span class="name-line name-line--accent">Aravind</span>
+                </h1>
                 
-                <div class="contact-info">
-                    <a href="mailto:ganesharavind18@gmail.com" class="contact-link">
-                        <span class="icon">📧</span> ganesharavind18@gmail.com
-                    </a>
-                    <a href="tel:+447776095480" class="contact-link">
-                        <span class="icon">📱</span> +44 777 609 5480
-                    </a>
-                    <a href="https://www.linkedin.com/in/ga418/" target="_blank" class="contact-link">
-                        <span class="icon">💼</span> LinkedIn Profile
-                    </a>
-                    <p class="contact-link">
-                        <span class="icon">📍</span> Nottingham, UK
+                <p class="hero-title" data-reveal data-delay="2">
+                    Data Analyst & Software Developer
+                </p>
+                
+                <p class="hero-location" data-reveal data-delay="3">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    Nottingham, United Kingdom
+                </p>
+            </div>
+            
+            <div class="hero-right">
+                <div class="profile-frame" data-reveal data-delay="2">
+                    <div class="profile-frame-inner">
+                        <img src="{% static 'core/files/profile.jpeg' %}" alt="Ganesh Aravind" class="profile-img">
+                    </div>
+                    <div class="profile-frame-accent"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll" data-reveal data-delay="4">
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section--about" id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-label" data-reveal>
+                    <!--
+                    <span class="label-number">01</span>
+                    -->
+                    <span class="label-text">About</span>
+                </div>
+                
+                <div class="about-content">
+                    <h2 class="about-headline" data-reveal>
+                        I transform messy data into <em>meaningful insights</em> that drive real decisions.
+                    </h2>
+                    
+                    <p class="about-text" data-reveal data-delay="1">
+                        I'm someone who genuinely enjoys working with data and understanding how it shapes real decisions. 
+                        What motivates me most is taking something messy or unclear and transforming it into something 
+                        that actually helps people — whether that's a dashboard, a report, or a well-designed process.
+                    </p>
+                    
+                    <p class="about-text" data-reveal data-delay="2">
+                        I come from a mix of technical and analytical roles, which means I'm as comfortable writing code 
+                        as I am interpreting insights or collaborating with stakeholders. I like solving problems, learning 
+                        new tools, and building things that feel intuitive and meaningful.
                     </p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Resume Download -->
-            <div class="download-section">
-                <a href="{% static /core/files/Resume_PDF.pdf}" download class="btn btn-primary">
-                    <span>📄</span> Download PDF
-                </a>
-                <a href="{% static /core/files/Resume_DOC.docx}" download class="btn btn-secondary">
-                    <span>📋</span> Download DOCX
-                </a>
+    <!-- Skills Section -->
+    <section class="section section--skills">
+        <div class="section-container">
+            <div class="skills-header" data-reveal>
+                <!--
+                <span class="label-number">02</span>
+                -->
+                <span class="label-text">Expertise</span>
             </div>
-
-            <!-- Skills -->
-            <div class="glass-card">
-                <h3 class="section-title">Skills</h3>
-                <div class="skills-grid">
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Django</span>
-                    <span class="skill-tag">Power BI</span>
-                    <span class="skill-tag">Tableau</span>
-                    <span class="skill-tag">Excel</span>
-                    <span class="skill-tag">R</span>
-                    <span class="skill-tag">Git</span>
-                </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="glass-card">
-                <h3 class="section-title">Certifications</h3>
-                <ul class="cert-list">
-                    <li>Atlassian Agile Project Management</li>
-                </ul>
-            </div>
-        </aside>
-
-        <!-- MAIN CONTENT / RIGHT COLUMN -->
-        <main class="content">
-
-        <!-- About Me -->
-        <section class="section">
-            <!--<h2 class="section-heading">About Me</h2> -->
             
-            <div class="glass-card project-card">
-                <h3 class="project-title">Who I Am</h3>
-                <p class="date-range">A bit about me</p>
-
-                <p class="achievements">
-                    I’m someone who genuinely enjoys working with data and understanding how it shapes real decisions. 
-                    What motivates me most is taking something messy or unclear and transforming it into something 
-                    that actually helps people — whether that's a dashboard, a report, or a well-designed process. 
-                    I come from a mix of technical and analytical roles, which means I’m as comfortable writing code 
-                    as I am interpreting insights or collaborating with stakeholders. I like solving problems, learning 
-                    new tools, and building things that feel intuitive and meaningful. Outside of the technical side, 
-                    I’m driven by curiosity, clarity, and the satisfaction of creating work that genuinely makes a 
-                    difference.
-                </p>
+            <div class="skills-marquee">
+                <div class="marquee-track">
+                    <span class="skill-item" data-skill>SQL</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Python</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Django</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Power BI</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Tableau</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Excel</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>R</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Git</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>SQL</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Python</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Django</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Power BI</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Tableau</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Excel</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>R</span>
+                    <span class="skill-divider">/</span>
+                    <span class="skill-item" data-skill>Git</span>
+                    <span class="skill-divider">/</span>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-            <!-- Experience -->
-            <section class="section">
-                <h2 class="section-heading">Professional Experience</h2>
-                
-                <div class="glass-card experience-card">
-                    <div class="card-header">
-                        <h3 class="job-title">Data Analyst</h3>
-                        <span class="company">Nottingham Trent University</span>
+    <!-- Experience Section -->
+    <section class="section section--experience" id="experience">
+        <div class="section-container">
+            <div class="experience-header">
+                <div class="label-group" data-reveal>
+                    <!--
+                    <span class="label-number">03</span>
+                    -->
+                    <span class="label-text">Experience</span>
+                </div>
+                <h2 class="section-title" data-reveal data-delay="1">Professional Journey</h2>
+            </div>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-marker">
+                        <span class="marker-dot"></span>
+                        <span class="marker-line"></span>
                     </div>
-                    <p class="date-range">May 2024 – Present</p>
-                    <ul class="achievements">
-                        <li>Co-leading funded research initiative for organisational insights dashboard in voluntary sector</li>
-                        <li>Designed full data pipeline using Python, Excel, and Django with multi-source dataset automation</li>
-                        <li>Created interactive dashboards in Power BI and Plotly for stakeholder exploration</li>
-                        <li>Oversaw team workflows via Git and Notion, coordinated development sprints</li>
+                    <div class="timeline-content">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">May 2024 — Present</span>
+                            <span class="timeline-badge">Current</span>
+                        </div>
+                        <h3 class="timeline-title">Data Analyst</h3>
+                        <p class="timeline-company">Nottingham Trent University</p>
+                        <ul class="timeline-list">
+                            <li>Co-leading funded research initiative for organisational insights dashboard in voluntary sector</li>
+                            <li>Designed full data pipeline using Python, Excel, and Django with multi-source dataset automation</li>
+                            <li>Created interactive dashboards in Power BI and Plotly for stakeholder exploration</li>
+                            <li>Oversaw team workflows via Git and Notion, coordinated development sprints</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Experience 2 -->
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-marker">
+                        <span class="marker-dot"></span>
+                        <span class="marker-line"></span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Jul 2022 — Jun 2023</span>
+                        </div>
+                        <h3 class="timeline-title">Technical Analyst</h3>
+                        <p class="timeline-company">Zoho Corp</p>
+                        <ul class="timeline-list">
+                            <li>Elevated Zoho adoption rates by 40% through demonstrations; 20% increase in satisfaction</li>
+                            <li>Achieved 95% customer retention rate through optimal solution optimization</li>
+                            <li>Directed clients through technical challenges, achieving 40% efficiency surge</li>
+                            <li>Collaborated with sales team, contributing to 20% revenue increase</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Experience 3 -->
+                <article class="timeline-item" data-reveal>
+                    <div class="timeline-marker">
+                        <span class="marker-dot"></span>
+                        <span class="marker-line"></span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">Sep 2018 — Jul 2019</span>
+                        </div>
+                        <h3 class="timeline-title">Software Developer</h3>
+                        <p class="timeline-company">TCS Tata Innovation Labs</p>
+                        <ul class="timeline-list">
+                            <li>Automated database upgrade pre-checks using Python, reducing testing time by 50%</li>
+                            <li>Achieved 60% accuracy in flight delay prediction on aviation datasets</li>
+                            <li>Developed Django web app with Spark-Kafka streaming for real-time railway data analysis</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section section--education" id="education">
+        <div class="section-container">
+            <div class="education-header">
+                <div class="label-group" data-reveal>
+                    <!--
+                    <span class="label-number">04</span>
+                    -->
+                    <span class="label-text">Education</span>
+                </div>
+            </div>
+            
+            <div class="education-grid">
+                <article class="education-card" data-reveal>
+                    <div class="education-year">2023 — 2024</div>
+                    <div class="education-content">
+                        <h3 class="education-degree">M.Sc. Management and Business Analytics</h3>
+                        <p class="education-school">Nottingham Trent University</p>
+                    </div>
+                    <div class="education-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                </article>
+
+                <article class="education-card" data-reveal data-delay="1">
+                    <div class="education-year">2014 — 2018</div>
+                    <div class="education-content">
+                        <h3 class="education-degree">B.Tech. Information Technology</h3>
+                        <p class="education-school">Sastra University</p>
+                    </div>
+                    <div class="education-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section--projects" id="projects">
+        <div class="section-container">
+            <div class="projects-header">
+                <div class="label-group" data-reveal>
+                    <!--
+                    <span class="label-number">05</span>
+                    -->
+                    <span class="label-text">Projects</span>
+                </div>
+                <h2 class="section-title" data-reveal data-delay="1">Selected Work</h2>
+            </div>
+            
+            <article class="project-feature" data-reveal>
+                <div class="project-feature-content">
+                    <div class="project-meta">
+                        <span class="project-client">Freeths LLP</span>
+                        <span class="project-date">May — Jul 2024</span>
+                    </div>
+                    <h3 class="project-title">Legal Database Optimization</h3>
+                    <ul class="project-results">
+                        <li>
+                            <span class="result-number">25%</span>
+                            <span class="result-label">Efficiency improvement through structured data organisation</span>
+                        </li>
+                        <li>
+                            <span class="result-number">30%</span>
+                            <span class="result-label">Reduction in data retrieval time</span>
+                        </li>
+                        <li>
+                            <span class="result-number">40%</span>
+                            <span class="result-label">Minimised data redundancy</span>
+                        </li>
                     </ul>
                 </div>
-
-                <div class="glass-card experience-card">
-                    <div class="card-header">
-                        <h3 class="job-title">Technical Analyst</h3>
-                        <span class="company">Zoho Corp</span>
+                <div class="project-feature-visual">
+                    <div class="visual-grid">
+                        <div class="visual-cell"></div>
+                        <div class="visual-cell"></div>
+                        <div class="visual-cell"></div>
+                        <div class="visual-cell"></div>
                     </div>
-                    <p class="date-range">July 2022 – June 2023</p>
-                    <ul class="achievements">
-                        <li>Elevated Zoho adoption rates by 40% through demonstrations; 20% increase in satisfaction</li>
-                        <li>Achieved 95% customer retention rate through optimal solution optimization</li>
-                        <li>Directed clients through technical challenges, achieving 40% efficiency surge</li>
-                        <li>Collaborated with sales team, contributing to 20% revenue increase</li>
-                    </ul>
                 </div>
+            </article>
+        </div>
+    </section>
 
-                <div class="glass-card experience-card">
-                    <div class="card-header">
-                        <h3 class="job-title">Software Developer</h3>
-                        <span class="company">TCS Tata Innovation Labs</span>
+    <!-- Achievements Section -->
+    <section class="section section--achievements" id="achievements">
+        <div class="section-container">
+            <div class="achievements-header">
+                <div class="label-group" data-reveal>
+                    <!--
+                    <span class="label-number">06</span>
+                    -->
+                    <span class="label-text">Achievements</span>
+                </div>
+            </div>
+            
+            <div class="achievements-grid">
+                <article class="achievement-card achievement-card--featured" data-reveal>
+                    <div class="achievement-badge">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="8" r="7"/>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                        </svg>
                     </div>
-                    <p class="date-range">Sep 2018 – July 2019</p>
-                    <ul class="achievements">
-                        <li>Automated database upgrade pre-checks using Python, reducing testing time by 50%</li>
-                        <li>Achieved 60% accuracy in flight delay prediction on aviation datasets</li>
-                        <li>Developed Django web app with Spark-Kafka streaming for real-time railway data analysis</li>
-                    </ul>
-                </div>
-            </section>
+                    <div class="achievement-content">
+                        <span class="achievement-year">2024</span>
+                        <h3 class="achievement-title">University Business Challenge</h3>
+                        <p class="achievement-description">
+                            Ranked among top 8 finalists nationwide out of 80 UK colleges, 
+                            demonstrating analytical, leadership, and entrepreneurial excellence.
+                        </p>
+                    </div>
+                </article>
 
-            <!-- Education -->
-            <section class="section">
-                <h2 class="section-heading">Education</h2>
+                <article class="achievement-card" data-reveal data-delay="1">
+                    <div class="achievement-badge achievement-badge--alt">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-content">
+                        <span class="achievement-year">2022</span>
+                        <h3 class="achievement-title">Advanced Coursework</h3>
+                        <p class="achievement-description">
+                            Design and Analysis of Algorithms, Machine Learning Algorithms 
+                            (University of Central Florida)
+                        </p>
+                    </div>
+                </article>
+
+                <article class="achievement-card" data-reveal data-delay="2">
+                    <div class="achievement-badge achievement-badge--alt">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Certifications</h3>
+                        <p class="achievement-description">
+                            Atlassian Agile Project Management
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer Section -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-cta" data-reveal>
+                <span class="footer-label">Get in touch</span>
+                <h2 class="footer-headline">Let's create something meaningful together.</h2>
+            </div>
+            
+            <div class="footer-grid">
+                <div class="footer-contact" data-reveal data-delay="1">
+                    <a href="mailto:ganesharavind18@gmail.com" class="contact-card">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">ganesharavind18@gmail.com</span>
+                        <span class="contact-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </span>
+                    </a>
+                    
+                    <a href="tel:+447776095480" class="contact-card">
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value">+44 777 609 5480</span>
+                        <span class="contact-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </span>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/ga418/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">linkedin.com/in/ga418</span>
+                        <span class="contact-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
                 
-                <div class="glass-card">
-                    <div class="card-header">
-                        <h3 class="degree">M.Sc. Management and Business Analytics</h3>
-                        <span class="institution">Nottingham Trent University</span>
+                <div class="footer-downloads" data-reveal data-delay="2">
+                    <span class="downloads-label">Download Resume</span>
+                    <div class="downloads-buttons">
+                        <a href="{% static 'core/files/Resume_PDF.pdf' %}" download class="download-btn download-btn--primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="12" y1="18" x2="12" y2="12"/>
+                                <polyline points="9,15 12,18 15,15"/>
+                            </svg>
+                            <span>PDF Format</span>
+                        </a>
+                        <a href="{% static 'core/files/Resume_DOC.docx' %}" download class="download-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                            <span>DOCX Format</span>
+                        </a>
                     </div>
-                    <p class="date-range">Sep 2023 – Oct 2024</p>
                 </div>
-
-                <div class="glass-card">
-                    <div class="card-header">
-                        <h3 class="degree">B.Tech. Information Technology</h3>
-                        <span class="institution">Sastra University</span>
-                    </div>
-                    <p class="date-range">Jun 2014 – Jun 2018</p>
-                </div>
-            </section>
-
-            <!-- Projects -->
-            <section class="section">
-                <h2 class="section-heading">Projects</h2>
-                
-                <div class="glass-card project-card">
-                    <h3 class="project-title">Legal Database Optimization - Freeths LLP</h3>
-                    <p class="date-range">May 2024 – Jul 2024</p>
-                    <ul class="achievements">
-                        <li>Improved legal database efficiency by 25% through structured data organisation</li>
-                        <li>Enhanced data accessibility, reducing retrieval time by 30%</li>
-                        <li>Streamlined data integration, minimising redundancy by 40%</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Achievements -->
-            <section class="section">
-                <h2 class="section-heading">Achievements</h2>
-                
-                <div class="glass-card achievement-item">
-                    <h3>University Business Challenge</h3>
-                    <p class="date-range">2024</p>
-                    <p>Ranked among top 8 finalists nationwide out of 80 UK colleges, demonstrating analytical, leadership, and entrepreneurial excellence.</p>
-                </div>
-
-                <div class="glass-card achievement-item">
-                    <h3>Advanced Coursework</h3>
-                    <p>Design and Analysis of Algorithms, Machine Learning Algorithms (University of Central Florida - 2022)</p>
-                </div>
-            </section>
-        </main>
-    </div>
+            </div>
+            
+            <div class="footer-bottom" data-reveal data-delay="3">
+                <p class="copyright">&copy; 2026 Ganesh Aravind. Designed with intention.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="{% static 'core/script.js' %}"></script>
 </body>
